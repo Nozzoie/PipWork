@@ -1,12 +1,6 @@
-from fastapi import FastAPI, File, UploadFile
-import pandas as pd
-import joblib
-from io import BytesIO
-
 app = FastAPI()
-
 # Загрузка обученной модели
-model_path = "laptop_price_model.pkl"
+model_path = "laptopPriceModel.pkl"
 model = joblib.load(model_path)
 
 @app.post("/predict/")
